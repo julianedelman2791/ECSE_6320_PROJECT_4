@@ -135,10 +135,10 @@ def prefix_search_vanilla(data, prefix):
     return results
 
 def main():
-    data_file = 'Column.txt'  # Your actual data file
+    data_file = 'Column.txt'
     dict_file = 'dictionary.txt'
     encoded_data_file = 'encoded_data.txt'
-    num_processes = 4  # Adjust based on your system
+    num_processes = 4
 
     # Read only the first 100,000 lines for testing
     data = read_data(data_file, num_lines=100000)
@@ -167,7 +167,7 @@ def main():
     string_to_id, id_to_string, encoded_data = read_encoded_column_file(dict_file, encoded_data_file)
 
     # Single data item to search
-    data_item = data[0]  # Use the first item from your data
+    data_item = data[0]
     item_id = string_to_id.get(data_item, None)
 
     # Vanilla search
@@ -190,7 +190,7 @@ def main():
         print(f"Dictionary search with SIMD found {len(indices_simd)} occurrences in {time_simd:.6f} seconds.")
 
     # Prefix search
-    prefix = data_item[:3]  # Use the first three characters of the data item
+    prefix = data_item[:3]
 
     # Vanilla prefix search
     start_time = time.time()
