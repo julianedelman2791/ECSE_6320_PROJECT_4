@@ -6,7 +6,7 @@ This project implements a dictionary codec in Python to compress columnar data a
 
 ## Project Structure
 
-The project consists of the following files:
+The project consists of the following files. Also note that the full `Column.txt` was used for the program; however, the files that have been uploaded are reduced to ten lines each for simple understanding. 
 
 `dictionary_codec.py` is the main Python script containing all encoding and query functionalities. It includes multi-threading for parallel processing and SIMD optimization via NumPy for accelerated query operations.
 
